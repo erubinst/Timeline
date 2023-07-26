@@ -64,8 +64,8 @@ def show_or_close_pop_up(click_data, cancel_clicks, completed_clicks, aborted_cl
 )
 def update_button_visibility(click_data):
     if click_data:
-        id = click_data['points'][0]['customdata'][0]
-        status = fig.df.loc[fig.df['id'] == id, 'Status'].values[0]
+        task_id = click_data['points'][0]['customdata'][0]
+        status = fig.df.loc[fig.df['task_id'] == task_id, 'Status'].values[0]
         completed_button_style = {'display': 'none'} if status != 'executing' and status != 'scheduled' else {}
         abort_button_style = {'display': 'none'} if status != 'executing' else {}
         executed_button_style = {'display': 'none'} if status != 'scheduled' else {}
@@ -90,14 +90,14 @@ def update_timeline(completed_clicks, aborted_clicks,executed_clicks, figure, cl
     triggered_id = ctx.triggered[0]['prop_id'].split('.')[0]
 
     if triggered_id in ('button-completed', 'button-abort', 'button-executed') and click_data:
-        id = click_data['points'][0]['customdata'][0]
+        task_id = click_data['points'][0]['customdata'][0]
         if triggered_id == 'button-completed':
             # need to replace this search with a map to a configuration id
-            fig.df.loc[fig.df['id'] == id, 'Status'] = 'completed'
+            fig.df.loc[fig.df['task_id'] == task_id, 'Status'] = 'completed'
         elif triggered_id == 'button-abort':
-            fig.df.loc[fig.df['id'] == id, 'Status'] = 'aborted'
+            fig.df.loc[fig.df['task_id'] == task_id, 'Status'] = 'aborted'
         elif triggered_id == 'button-executed':
-            fig.df.loc[fig.df['id '] == id, 'Status'] = 'executing'
+            fig.df.loc[fig.df['task_id'] == task_id, 'Status'] = 'executing'
 
     x_range = [relayout_data.get('xaxis.range[0]'), relayout_data.get('xaxis.range[1]')]
     y_range = [relayout_data.get('yaxis.range[0]'), relayout_data.get('yaxis.range[1]')]

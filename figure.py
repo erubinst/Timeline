@@ -17,7 +17,7 @@ class Figure():
         with open(json_file_name, "r") as json_file:
             data = json.load(json_file)
         self.df = pd.DataFrame(data["data"]["tasks"])
-        new_column_labels = ["lotid", "id", "Task", "Resource",
+        new_column_labels = ["lotid", "task_id", "Task", "Resource",
                              "configurationId", "Start", "Finish", "Status"]
         self.df.columns = new_column_labels
         self.df['Start'] = self.df['Start'].apply(
@@ -29,7 +29,7 @@ class Figure():
     def get_figure(self, x_range = [], y_range = []):
         custom_order = self.df['Resource'].unique()
         self.plot = px.timeline(self.df, x_start="Start", x_end="Finish", y="Resource", color="Status",
-                                custom_data=['id'], category_orders={"Resource": custom_order},
+                                custom_data=['task_id'], category_orders={"Resource": custom_order},
                                 color_discrete_map=self.colors, hover_name="Task", text = "Task")
         self.plot.update_traces(textposition='inside', cliponaxis= True, textangle=0)
         if x_range:
