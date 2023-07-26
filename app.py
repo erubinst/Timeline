@@ -17,8 +17,9 @@ app.layout = html.Div([
             dbc.ModalBody(id='pop-up-content'),
             dbc.ModalFooter(
                 [
-                    dbc.Button("Mark as Completed", id="button-Completed", color="success", className="mr-2"),
-                    dbc.Button("Mark as Scheduled", id="button-not-started", color="warning", className="mr-2", style={'display': 'none'}),
+                    dbc.Button("Execute", id="button-executed", color="success", className="mr-2"),
+                    dbc.Button("Complete", id="button-completed", color="dark", className="mr-2"),
+                    dbc.Button("Abort", id="button-abort", color="danger", className="mr-2", style={'display': 'none'}),
                     dbc.Button("Cancel", id="button-cancel", color="secondary")
                 ]
             ),
@@ -35,11 +36,12 @@ app.layout = html.Div([
      Output('pop-up-content', 'children')],
     [Input('timeline-graph', 'clickData'),
      Input('button-cancel', 'n_clicks'),
-     Input('button-Completed', 'n_clicks'),
-     Input('button-not-started', 'n_clicks')],
+     Input('button-completed', 'n_clicks'),
+     Input('button-abort', 'n_clicks'),
+     Input('button-executed', 'n_clicks')],
     prevent_initial_call=True
 )
-def show_or_close_pop_up(click_data, cancel_clicks, Completed_clicks, not_started_clicks):
+def show_or_close_pop_up(click_data, cancel_clicks, completed_clicks, aborted_clicks, executed_clicks):
     ctx = dash.callback_context
     triggered_id = ctx.triggered[0]['prop_id'].split('.')[0]
 
@@ -47,59 +49,60 @@ def show_or_close_pop_up(click_data, cancel_clicks, Completed_clicks, not_starte
         task = click_data['points'][0]['y']  # Access the task name from click_data
         return True, f'You clicked on Task: {task}'
 
-    if triggered_id in ('button-cancel', 'button-Completed', 'button-not-started'):
+    if triggered_id in ('button-cancel', 'button-completed', 'button-abort', 'button-executed'):
         return False, None
 
     return dash.no_update, dash.no_update
 
-# Callback to update the visibility of the "Mark as Completed" and "Mark as Scheduled" buttons based on the resource status
+# Callback to update the visibility of the buttons based on resource status
 @app.callback(
-    [Output('button-Completed', 'style'),
-     Output('button-not-started', 'style')],
+    [Output('button-completed', 'style'),
+     Output('button-abort', 'style'),
+     Output('button-executed', 'style')],
     Input('timeline-graph', 'clickData'),
     prevent_initial_call=True
 )
 def update_button_visibility(click_data):
     if click_data:
-        resource = click_data['points'][0]['y']  # Access the task name from click_data
-        task = click_data['points'][0]['customdata'][0]
-        print(click_data)
-        # need to replace search with mapping to a configuration id
-        status = fig.df.loc[(fig.df['Task'] == task) & (fig.df['Resource'] == resource), 'Status'].values[0]
-        # Set the visibility of the "Mark as Completed" button based on the resource status
-        Completed_button_style = {'display': 'none'} if status == 'Completed' else {}
-        
-        # Set the visibility of the "Mark as Scheduled" button based on the resource status
-        not_started_button_style = {'display': 'none'} if status == 'Scheduled' else {}
+        id = click_data['points'][0]['customdata'][0]
+        status = fig.df.loc[fig.df['id'] == id, 'Status'].values[0]
+        completed_button_style = {'display': 'none'} if status != 'executing' and status != 'scheduled' else {}
+        abort_button_style = {'display': 'none'} if status != 'executing' else {}
+        executed_button_style = {'display': 'none'} if status != 'scheduled' else {}
 
-        return Completed_button_style, not_started_button_style
+        return completed_button_style, abort_button_style, executed_button_style
 
     return {}, {}
 
-# Callback to update the timeline data when the "Mark as Completed" or "Mark as Scheduled" button is clicked
+# Callback to update the timeline data when the buttons are clicked
 @app.callback(
     Output('timeline-graph', 'figure'),
-    [Input('button-Completed', 'n_clicks'),
-     Input('button-not-started', 'n_clicks')],
-    State('timeline-graph', 'figure'),
-    State('timeline-graph', 'clickData'),
+    [Input('button-completed', 'n_clicks'),
+     Input('button-abort', 'n_clicks'),
+     Input('button-executed', 'n_clicks')],
+    [State('timeline-graph', 'figure'),
+     State('timeline-graph', 'clickData'),
+     State('timeline-graph', 'relayoutData')],  # Include the relayoutData property
     prevent_initial_call=True
 )
-def update_timeline(Completed_clicks, not_started_clicks, figure, click_data):
+def update_timeline(completed_clicks, aborted_clicks,executed_clicks, figure, click_data, relayout_data):
     ctx = dash.callback_context
     triggered_id = ctx.triggered[0]['prop_id'].split('.')[0]
 
-    if triggered_id in ('button-Completed', 'button-not-started') and click_data:
-        resource = click_data['points'][0]['y']  # Access the task name from click_data
-        print(click_data)
-        task = click_data['points'][0]['customdata'][0]
-        if triggered_id == 'button-Completed':
+    if triggered_id in ('button-completed', 'button-abort', 'button-executed') and click_data:
+        id = click_data['points'][0]['customdata'][0]
+        if triggered_id == 'button-completed':
             # need to replace this search with a map to a configuration id
-            fig.df.loc[(fig.df['Task'] == task) & (fig.df['Resource'] == resource), 'Status'] = 'Completed'
-        elif triggered_id == 'button-not-started':
-            fig.df.loc[(fig.df['Task'] == task) & (fig.df['Resource'] == resource), 'Status'] = 'Scheduled'
+            fig.df.loc[fig.df['id'] == id, 'Status'] = 'completed'
+        elif triggered_id == 'button-abort':
+            fig.df.loc[fig.df['id'] == id, 'Status'] = 'aborted'
+        elif triggered_id == 'button-executed':
+            fig.df.loc[fig.df['id '] == id, 'Status'] = 'executing'
 
-    fig.get_figure()
+    x_range = [relayout_data.get('xaxis.range[0]'), relayout_data.get('xaxis.range[1]')]
+    y_range = [relayout_data.get('yaxis.range[0]'), relayout_data.get('yaxis.range[1]')]
+    fig.get_figure(x_range, y_range)
+
     return fig.plot
 
 if __name__ == '__main__':
