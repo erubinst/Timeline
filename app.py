@@ -13,7 +13,7 @@ app.layout = html.Div([
     dbc.Modal(
         id='pop-up',
         children=[
-            dbc.ModalHeader("Task Details"),
+            dbc.ModalHeader("Task Details", close_button=False),
             dbc.ModalBody(id='pop-up-content'),
             dbc.ModalFooter(
                 [
@@ -30,29 +30,34 @@ app.layout = html.Div([
     )
 ])
 
-# Callback to show or close the pop-up and populate its content
 @app.callback(
     [Output('pop-up', 'is_open'),
-     Output('pop-up-content', 'children')],
+     Output('pop-up-content', 'children'),
+     Output('timeline-graph', 'clickData')],
     [Input('timeline-graph', 'clickData'),
      Input('button-cancel', 'n_clicks'),
      Input('button-completed', 'n_clicks'),
      Input('button-abort', 'n_clicks'),
      Input('button-executed', 'n_clicks')],
+    [State('pop-up', 'is_open'),
+     State('timeline-graph', 'clickData')],
     prevent_initial_call=True
 )
-def show_or_close_pop_up(click_data, cancel_clicks, completed_clicks, aborted_clicks, executed_clicks):
+def show_or_close_pop_up(click_data, cancel_clicks, completed_clicks, aborted_clicks, executed_clicks, is_open, last_click_data):
     ctx = dash.callback_context
     triggered_id = ctx.triggered[0]['prop_id'].split('.')[0]
 
     if triggered_id == 'timeline-graph' and click_data:
         task = click_data['points'][0]['y']  # Access the task name from click_data
-        return True, f'You clicked on Task: {task}'
+        return True, f'You clicked on Task: {task}', click_data
 
-    if triggered_id in ('button-cancel', 'button-completed', 'button-abort', 'button-executed'):
-        return False, None
+    if triggered_id == 'button-cancel':
+        return False, None, {}  # Return an empty dictionary as clickData when pop-up is closed
 
-    return dash.no_update, dash.no_update
+    if triggered_id in ('button-completed', 'button-abort', 'button-executed'):
+        return False, None, last_click_data
+
+    return is_open, dash.no_update, dash.no_update
 
 # Callback to update the visibility of the buttons based on resource status
 @app.callback(
@@ -72,7 +77,7 @@ def update_button_visibility(click_data):
 
         return completed_button_style, abort_button_style, executed_button_style
 
-    return {}, {}
+    return {}, {}, {}
 
 # Callback to update the timeline data when the buttons are clicked
 @app.callback(

@@ -31,7 +31,7 @@ class Figure():
         self.plot = px.timeline(self.df, x_start="Start", x_end="Finish", y="Resource", color="Status",
                                 custom_data=['task_id'], category_orders={"Resource": custom_order},
                                 color_discrete_map=self.colors, hover_name="Task", text = "Task")
-        self.plot.update_traces(textposition='inside', cliponaxis= True, textangle=0)
+        self.plot.update_traces(insidetextanchor='middle', textposition='inside', cliponaxis= True, textangle=0)
         if x_range:
             self.plot.update_layout(xaxis_range=x_range)
         if y_range:
