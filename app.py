@@ -3,8 +3,12 @@ from dash import Dash, html, dcc, callback, Output, Input, State
 import plotly.express as px
 from figure import fig # Import the df and fig from the figure module
 import dash_bootstrap_components as dbc
+from flask import Flask, request, jsonify
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], suppress_callback_exceptions=True)
+server = app.server
+# Store the received message
+latest_received_message = None
 
 # Layout with the Gantt chart
 app.layout = html.Div([
@@ -27,7 +31,11 @@ app.layout = html.Div([
         centered=True,
         is_open=False,
         className="modal-dialog"
-    )
+    ),
+    html.H1("Post Message Receiver"),
+    html.Div(id="message-output"),
+    # Add an interval component to trigger a callback every 5 seconds
+    dcc.Interval(id="update-messages-interval", interval=5000, n_intervals=0)
 ])
 
 @app.callback(
@@ -109,6 +117,35 @@ def update_timeline(completed_clicks, aborted_clicks,executed_clicks, figure, cl
     fig.get_figure(x_range, y_range)
 
     return fig.plot
+
+# Route to handle the incoming POST requests and update the latest received message
+def update_messages():
+    global latest_received_message
+    message = request.form.get('message')
+    if message:
+        latest_received_message = message
+    return jsonify(success=True)
+
+server.add_url_rule('/update', view_func=update_messages, methods=['POST'])
+
+# Callback to update the UI with the latest received message
+@app.callback(
+    Output("message-output", "children"),
+    [Input("update-messages-interval", "n_intervals")],
+)
+def update_output(n_intervals):
+    if latest_received_message:
+        return [
+            html.Div([
+                html.Hr(),
+                html.P("Latest received message:"),
+                html.Pre(latest_received_message),
+                html.Hr()
+            ])
+        ]
+    else:
+        return []
+
 
 if __name__ == '__main__':
     app.run_server(debug=True)
