@@ -1,19 +1,25 @@
 import dash
 from dash import Dash, html, dcc, callback, Output, Input, State
 import plotly.express as px
-from figure import fig # Import the df and fig from the figure module
+from figure import Figure
 import dash_bootstrap_components as dbc
 from flask import Flask, request, jsonify
+import json
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], suppress_callback_exceptions=True)
 server = app.server
-# Store the received message
+# Store the received message - should be initialized by requesting from scheduler
 latest_received_message = None
+fig = Figure()
+with open("demo-domain-schedule.json", "r") as json_file:
+            data = json.load(json_file)
+fig.get_figure(json_data=data)
 
 # Layout with the Gantt chart
 app.layout = html.Div([
     html.H1(children='Timeline', style={'textAlign':'center'}),
-    dcc.Graph(id='timeline-graph', figure=fig.plot),
+    dcc.Graph(id='timeline-graph', figure=fig.plot),   
+
     dbc.Modal(
         id='pop-up',
         children=[
@@ -32,12 +38,11 @@ app.layout = html.Div([
         is_open=False,
         className="modal-dialog"
     ),
-    html.H1("Post Message Receiver"),
-    html.Div(id="message-output"),
     # Add an interval component to trigger a callback every 5 seconds
-    dcc.Interval(id="update-messages-interval", interval=5000, n_intervals=0)
+    dcc.Interval(id="update-messages-interval", interval=1000, n_intervals=0)
 ])
 
+# Callback to show or close the popup based on clicks
 @app.callback(
     [Output('pop-up', 'is_open'),
      Output('pop-up-content', 'children'),
@@ -89,7 +94,7 @@ def update_button_visibility(click_data):
 
 # Callback to update the timeline data when the buttons are clicked
 @app.callback(
-    Output('timeline-graph', 'figure'),
+    Output('timeline-graph', 'figure', allow_duplicate=True),
     [Input('button-completed', 'n_clicks'),
      Input('button-abort', 'n_clicks'),
      Input('button-executed', 'n_clicks')],
@@ -105,7 +110,6 @@ def update_timeline(completed_clicks, aborted_clicks,executed_clicks, figure, cl
     if triggered_id in ('button-completed', 'button-abort', 'button-executed') and click_data:
         task_id = click_data['points'][0]['customdata'][0]
         if triggered_id == 'button-completed':
-            # need to replace this search with a map to a configuration id
             fig.df.loc[fig.df['task_id'] == task_id, 'Status'] = 'completed'
         elif triggered_id == 'button-abort':
             fig.df.loc[fig.df['task_id'] == task_id, 'Status'] = 'aborted'
@@ -121,7 +125,7 @@ def update_timeline(completed_clicks, aborted_clicks,executed_clicks, figure, cl
 # Route to handle the incoming POST requests and update the latest received message
 def update_messages():
     global latest_received_message
-    message = request.form.get('message')
+    message = request.get_json()
     if message:
         latest_received_message = message
     return jsonify(success=True)
@@ -129,22 +133,22 @@ def update_messages():
 server.add_url_rule('/update', view_func=update_messages, methods=['POST'])
 
 # Callback to update the UI with the latest received message
+# Allow this to run on initial booting of the app so that latest data from scheduler is displayed
 @app.callback(
-    Output("message-output", "children"),
+    Output('timeline-graph', 'figure'),
     [Input("update-messages-interval", "n_intervals")],
+    State('timeline-graph', 'relayoutData')
 )
-def update_output(n_intervals):
+def update_output(n_intervals, relayout_data):
+    global latest_received_message
     if latest_received_message:
-        return [
-            html.Div([
-                html.Hr(),
-                html.P("Latest received message:"),
-                html.Pre(latest_received_message),
-                html.Hr()
-            ])
-        ]
-    else:
-        return []
+        if relayout_data:
+            x_range = [relayout_data.get('xaxis.range[0]'), relayout_data.get('xaxis.range[1]')]
+            y_range = [relayout_data.get('yaxis.range[0]'), relayout_data.get('yaxis.range[1]')]
+            fig.get_figure(x_range, y_range, json_data=latest_received_message)
+        else:
+            fig.get_figure(json_data = latest_received_message)
+    return fig.plot
 
 
 if __name__ == '__main__':

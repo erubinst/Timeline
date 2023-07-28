@@ -13,9 +13,7 @@ class Figure():
         self.plot = None
 
     # Loads in json file and formats into dataframe plotly can use
-    def json_to_df(self, json_file_name):
-        with open(json_file_name, "r") as json_file:
-            data = json.load(json_file)
+    def json_to_df(self, data):
         self.df = pd.DataFrame(data["data"]["tasks"])
         new_column_labels = ["lotid", "task_id", "Task", "Resource",
                              "configurationId", "Start", "Finish", "Status"]
@@ -26,7 +24,9 @@ class Figure():
             lambda x: pd.to_datetime(x[0]))
 
     # creates plotly timeline
-    def get_figure(self, x_range = [], y_range = []):
+    def get_figure(self, x_range = [], y_range = [], json_data = None):
+        if json_data:
+             self.json_to_df(json_data)
         custom_order = self.df['Resource'].unique()
         self.plot = px.timeline(self.df, x_start="Start", x_end="Finish", y="Resource", color="Status",
                                 custom_data=['task_id'], category_orders={"Resource": custom_order},
@@ -38,5 +38,6 @@ class Figure():
             self.plot.update_layout(yaxis_range=y_range)
 
 fig = Figure()
-fig.json_to_df("demo-domain-schedule.json")
-fig.get_figure()
+with open("demo-domain-schedule.json", "r") as json_file:
+            data = json.load(json_file)
+fig.get_figure(json_data=data)
