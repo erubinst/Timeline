@@ -148,6 +148,7 @@ def update_output(n_intervals, relayout_data):
             fig.get_figure(x_range, y_range, json_data=latest_received_message)
         else:
             fig.get_figure(json_data = latest_received_message)
+        latest_received_message = None
     return fig.plot
 
 
