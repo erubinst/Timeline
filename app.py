@@ -146,13 +146,13 @@ server.add_url_rule('/update', view_func=update_messages, methods=['POST'])
 def update_output(n_intervals, relayout_data):
     global latest_received_message
     global initial_post
+    x_range, y_range = [], []
+    if relayout_data:
+        x_range = [relayout_data.get('xaxis.range[0]'), relayout_data.get('xaxis.range[1]')]
+        y_range = [relayout_data.get('yaxis.range[0]'), relayout_data.get('yaxis.range[1]')]
+        fig.update_axes(x_range, y_range)
     if latest_received_message:
-        if relayout_data:
-            x_range = [relayout_data.get('xaxis.range[0]'), relayout_data.get('xaxis.range[1]')]
-            y_range = [relayout_data.get('yaxis.range[0]'), relayout_data.get('yaxis.range[1]')]
-            fig.get_figure(x_range, y_range, json_data=latest_received_message)
-        else:
-            fig.get_figure(json_data = latest_received_message)
+        fig.get_figure(x_range, y_range, json_data = latest_received_message)
         latest_received_message = None
         initial_post = False
         return fig.plot, {'display': 'block'}

@@ -22,7 +22,13 @@ class Figure():
             lambda x: pd.to_datetime(x[0]))
         self.df['Finish'] = self.df['Finish'].apply(
             lambda x: pd.to_datetime(x[0]))
-
+        
+    def update_axes(self, x_range, y_range):
+        if x_range:
+            self.plot.update_layout(xaxis_range=x_range)
+        if y_range:
+            self.plot.update_layout(yaxis_range=y_range)
+         
     # creates plotly timeline
     def get_figure(self, x_range = [], y_range = [], json_data = None):
         if json_data:
@@ -32,10 +38,7 @@ class Figure():
                                 custom_data=['task_id'], category_orders={"Resource": custom_order},
                                 color_discrete_map=self.colors, hover_name="Task", text = "Task")
         self.plot.update_traces(insidetextanchor='middle', textposition='inside', cliponaxis= True, textangle=0)
-        if x_range:
-            self.plot.update_layout(xaxis_range=x_range)
-        if y_range:
-            self.plot.update_layout(yaxis_range=y_range)
+        self.update_axes(x_range, y_range)
 
 fig = Figure()
 with open("demo-domain-schedule.json", "r") as json_file:
