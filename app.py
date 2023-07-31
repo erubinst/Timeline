@@ -10,6 +10,7 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], suppress_
 server = app.server
 # Store the received message - should be initialized by requesting from scheduler
 latest_received_message = None
+initial_post = True
 fig = Figure()
 with open("demo-domain-schedule.json", "r") as json_file:
             data = json.load(json_file)
@@ -18,7 +19,9 @@ fig.get_figure(json_data=data)
 # Layout with the Gantt chart
 app.layout = html.Div([
     html.H1(children='Timeline', style={'textAlign':'center'}),
-    dcc.Graph(id='timeline-graph', figure=fig.plot),   
+    html.Div(id='timeline-graph-container', style={'display': 'none'}, children=[
+        dcc.Graph(id='timeline-graph', figure=fig.plot),
+    ]),   
 
     dbc.Modal(
         id='pop-up',
@@ -135,12 +138,14 @@ server.add_url_rule('/update', view_func=update_messages, methods=['POST'])
 # Callback to update the UI with the latest received message
 # Allow this to run on initial booting of the app so that latest data from scheduler is displayed
 @app.callback(
-    Output('timeline-graph', 'figure'),
+    [Output('timeline-graph', 'figure'),
+     Output('timeline-graph-container', 'style')],
     [Input("update-messages-interval", "n_intervals")],
     State('timeline-graph', 'relayoutData')
 )
 def update_output(n_intervals, relayout_data):
     global latest_received_message
+    global initial_post
     if latest_received_message:
         if relayout_data:
             x_range = [relayout_data.get('xaxis.range[0]'), relayout_data.get('xaxis.range[1]')]
@@ -149,7 +154,12 @@ def update_output(n_intervals, relayout_data):
         else:
             fig.get_figure(json_data = latest_received_message)
         latest_received_message = None
-    return fig.plot
+        initial_post = False
+        return fig.plot, {'display': 'block'}
+    elif initial_post:
+        return {'data': [], 'layout': {}}, {'display': 'none'}
+    return fig.plot, {'display': 'block'}
+
 
 
 if __name__ == '__main__':
