@@ -12,9 +12,6 @@ server = app.server
 latest_received_message = None
 initial_post = True
 fig = Figure()
-with open("demo-domain-schedule.json", "r") as json_file:
-            data = json.load(json_file)
-fig.get_figure(json_data=data)
 
 # Layout with the Gantt chart
 app.layout = html.Div([
@@ -39,7 +36,9 @@ app.layout = html.Div([
         ],
         centered=True,
         is_open=False,
-        className="modal-dialog"
+        className="modal-dialog",
+        backdrop='static'
+
     ),
     # Add an interval component to trigger a callback every 5 seconds
     dcc.Interval(id="update-messages-interval", interval=1000, n_intervals=0)

@@ -1,0 +1,196 @@
+{
+    "status": "success",
+    "data": {
+        "id": "schedule-5",
+        "referenceStartTime": "2022-02-05T08:00:00+0000",
+        "tasks": [
+            {
+                "lotId": 1,
+                "taskId": 1,
+                "taskName": "Load-Depot-Legos",
+                "agentId": "Depot-Assistant-Barnes",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:00:00+0000",
+                    "2022-02-11T23:00:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:10:00+0000",
+                    "2022-02-11T23:10:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "lotId": 1,
+                "taskId": 2,
+                "taskName": "Load-Depot-Legos",
+                "agentId": "AMR-2",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:00:00+0000",
+                    "2022-02-11T23:00:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:10:00+0000",
+                    "2022-02-11T23:10:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "lotId": 1,
+                "taskId": 3,
+                "taskName": "Move-Legos-To-Kitter",
+                "agentId": "AMR-2",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:10:00+0000",
+                    "2022-02-11T23:10:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:15:00+0000",
+                    "2022-02-11T23:15:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "lotId": 1,
+                "taskId": 4,
+                "taskName": "Kit-Legos",
+                "agentId": "Kitter-Franklin",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:15:00+0000",
+                    "2022-02-11T23:15:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:25:00+0000",
+                    "2022-02-11T23:25:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "lotId": 1,
+                "taskId": 5,
+                "taskName": "Move-Legos-To-Arm",
+                "agentId": "AMR-2",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:25:00+0000",
+                    "2022-02-11T23:25:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:30:00+0000",
+                    "2022-02-11T23:30:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "lotId": 1,
+                "taskId": 6,
+                "taskName": "Unload-Kit",
+                "agentId": "Robot-Arm-2",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:30:00+0000",
+                    "2022-02-11T23:30:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:32:00+0000",
+                    "2022-02-11T23:32:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "lotId": 1,
+                "taskId": 7,
+                "taskName": "Unload-Kit",
+                "agentId": "AMR-2",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:30:00+0000",
+                    "2022-02-11T23:30:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:32:00+0000",
+                    "2022-02-11T23:32:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "lotId": 1,
+                "taskId": 8,
+                "taskName": "Build-Lego-Structure",
+                "agentId": "Robot-Arm-2",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:32:00+0000",
+                    "2022-02-11T23:32:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:52:00+0000",
+                    "2022-02-11T23:52:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "lotId": 1,
+                "taskId": 9,
+                "taskName": "Transfer-Lego",
+                "agentId": "Robot-Arm-2",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:52:00+0000",
+                    "2022-02-11T23:52:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:54:00+0000",
+                    "2022-02-11T23:54:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "lotId": 1,
+                "taskId": 10,
+                "taskName": "Transfer-Lego",
+                "agentId": "AMR-2",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:52:00+0000",
+                    "2022-02-11T23:52:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:54:00+0000",
+                    "2022-02-11T23:54:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "lotId": 1,
+                "taskId": 11,
+                "taskName": "Move-Lego-To-Table",
+                "agentId": "AMR-2",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:54:00+0000",
+                    "2022-02-11T23:54:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:59:00+0000",
+                    "2022-02-11T23:59:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            }
+        ]
+    }
+}

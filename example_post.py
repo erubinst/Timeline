@@ -1,7 +1,7 @@
 import requests
 import json
 
-json_file_name = "demo-domain-schedule-copy.json"
+json_file_name = "mfi-example-schedule.json"
 url = "http://127.0.0.1:8050/update"  # Replace with the correct address if needed
 with open(json_file_name, "r") as json_file:
             data = json.load(json_file)
