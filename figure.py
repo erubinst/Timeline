@@ -7,8 +7,15 @@ from datetime import datetime as dt
 class Figure():
     def __init__(self, df=pd.DataFrame()):
         self.df = pd.DataFrame({
+            'lotid': [],
+            'task_id': [],
+            'Task': [],
+            'Resource': [],
+            'configurationId': [],
             'Start': [],
             'Finish': [],
+            'Status': [],
+            'Notes': [],
         })
         self.colors = {'scheduled': 'rgb(249,168,37)',  # Orange
                        "executing": "rgb(40, 167, 69)",  # Green
@@ -19,7 +26,6 @@ class Figure():
     # Loads in json file and formats into dataframe plotly can use
     def json_to_df(self, data):
         self.df = pd.DataFrame(data["data"]["tasks"])
-        print(self.df)
         new_column_labels = ["lotid", "task_id", "Task", "Resource",
                              "configurationId", "Start", "Finish", "Status", "Notes"]
         self.df.columns = new_column_labels
@@ -28,14 +34,16 @@ class Figure():
         self.df['Finish'] = self.df['Finish'].apply(
             lambda x: pd.to_datetime(x[0]))
 
-    def update_axes(self, x_range, y_range):
+    def update_axes(self, x_range, y_range, dragmode):
         if x_range:
             self.plot.update_layout(xaxis_range=x_range)
         if y_range:
             self.plot.update_layout(yaxis_range=y_range)
+        if dragmode:
+            self.plot.update_layout(dragmode=dragmode)
 
     # creates plotly timeline
-    def get_figure(self, x_range=[], y_range=[], json_data=None):
+    def get_figure(self, x_range=[], y_range=[], dragmode = '', json_data=None):
         if json_data:
             self.json_to_df(json_data)
         custom_order = self.df['Resource'].unique()
@@ -44,4 +52,4 @@ class Figure():
                                 color_discrete_map=self.colors, hover_name="Task", text="Task", hover_data=["Start", "Finish", "Status", "Notes"])
         self.plot.update_traces(
             insidetextanchor='middle', textposition='inside', cliponaxis=True, textangle=0)
-        self.update_axes(x_range, y_range)
+        self.update_axes(x_range, y_range, dragmode)
