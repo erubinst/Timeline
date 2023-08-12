@@ -44,28 +44,32 @@ layout = html.Div([
 ])
 
 @callback(
-    Output('relayout-data-store', 'data'), 
-    Input('timeline-graph', 'relayoutData'), 
+    Output('relayout-data-store', 'data'),
+    Input('timeline-graph', 'relayoutData'),
     State('relayout-data-store', 'data')
 )
 def update_relayout_data(relayout_data, prev_relayout_data):
     print("Relayout data: ", relayout_data)
     if relayout_data:
-        x_range = [relayout_data.get('xaxis.range[0]'), relayout_data.get('xaxis.range[1]')]
-        y_range = [relayout_data.get('yaxis.range[0]'), relayout_data.get('yaxis.range[1]')]
+        x_range = [relayout_data.get(
+            'xaxis.range[0]'), relayout_data.get('xaxis.range[1]')]
+        y_range = [relayout_data.get(
+            'yaxis.range[0]'), relayout_data.get('yaxis.range[1]')]
         dragmode = relayout_data.get('dragmode')
-        if prev_relayout_data == [[],[], None]:
+        if prev_relayout_data == [[], [], None]:
             return [x_range, y_range, dragmode]
         else:
             if relayout_data.get('autosize') or relayout_data.get('xaxis.autorange'):
-                return [[],[], dragmode]
+                return [[], [], dragmode]
             else:
-                x_range = [x_range[0] or prev_relayout_data[0][0], x_range[1] or prev_relayout_data[0][1]]
-                y_range = [y_range[0] or prev_relayout_data[1][0], y_range[1] or prev_relayout_data[1][1]]
+                x_range = [x_range[0] or prev_relayout_data[0]
+                           [0], x_range[1] or prev_relayout_data[0][1]]
+                y_range = [y_range[0] or prev_relayout_data[1]
+                           [0], y_range[1] or prev_relayout_data[1][1]]
                 dragmode = dragmode or prev_relayout_data[2]
                 return [x_range, y_range, dragmode]
     else:
-        return [[],[], None]
+        return [[], [], None]
 
 # Callback to show or close the popup based on clicks
 
@@ -113,7 +117,7 @@ def show_or_close_pop_up(click_data, cancel_clicks, completed_clicks, aborted_cl
 def update_button_visibility(click_data):
     if click_data:
         task_id = click_data['points'][0]['customdata'][0]
-        status = fig.df.loc[fig.df['task_id'] == task_id, 'Status'].values[0]
+        status = fig.df.loc[fig.df['taskId'] == task_id, 'status'].values[0]
         completed_button_style = {
             'display': 'none'} if status != 'executing' and status != 'scheduled' else {}
         abort_button_style = {
@@ -126,6 +130,8 @@ def update_button_visibility(click_data):
     return {}, {}, {}
 
 # Callback to update the timeline data when the buttons are clicked
+
+
 @callback(
     Output('timeline-graph', 'figure', allow_duplicate=True),
     [Input('button-completed', 'n_clicks'),
@@ -143,11 +149,11 @@ def update_timeline(completed_clicks, aborted_clicks, executed_clicks, relayout_
     if triggered_id in ('button-completed', 'button-abort', 'button-executed') and click_data:
         task_id = click_data['points'][0]['customdata'][0]
         if triggered_id == 'button-completed':
-            fig.df.loc[fig.df['task_id'] == task_id, 'Status'] = 'completed'
+            fig.df.loc[fig.df['taskId'] == task_id, 'status'] = 'completed'
         elif triggered_id == 'button-abort':
-            fig.df.loc[fig.df['task_id'] == task_id, 'Status'] = 'aborted'
+            fig.df.loc[fig.df['task_id'] == task_id, 'status'] = 'aborted'
         elif triggered_id == 'button-executed':
-            fig.df.loc[fig.df['task_id'] == task_id, 'Status'] = 'executing'
+            fig.df.loc[fig.df['taskId'] == task_id, 'status'] = 'executing'
 
     x_range = relayout_data[0]
     y_range = relayout_data[1]
@@ -170,14 +176,14 @@ def update_timeline(completed_clicks, aborted_clicks, executed_clicks, relayout_
 )
 def update_output(n_intervals, relayout_data):
     global initial_post
-    print("latest", config.latest_received_message)
     x_range, y_range = [], []
     if relayout_data:
         x_range = relayout_data[0]
         y_range = relayout_data[1]
         dragmode = relayout_data[2]
     if config.latest_received_message:
-        fig.get_figure(x_range, y_range, dragmode, json_data=config.latest_received_message)
+        fig.get_figure(x_range, y_range, dragmode,
+                       json_data=config.latest_received_message)
         config.latest_received_message = None
         initial_post = False
         return fig.plot, {'display': 'block'}
