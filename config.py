@@ -1,0 +1,2 @@
+global latest_received_message
+latest_received_message = None
