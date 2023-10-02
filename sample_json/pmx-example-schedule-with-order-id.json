@@ -1410,7 +1410,7 @@
             },
             {
                 "orderId": "Request-A",
-                "lotId": 1,
+                "lotId": 5,
                 "taskId": 121,
                 "taskName": "Unplug-Connect-Fuel-Hose-Reducer",
                 "agentId": "Torque-Wrench-1",
@@ -1427,8 +1427,8 @@
                 "notes": "This is a note."
             },
             {
-                "orderId": "Request-A",
-                "lotId": 1,
+                "orderId": "Request-B",
+                "lotId": 3,
                 "taskId": 122,
                 "taskName": "Unplug-Connect-Fuel-Hose-Reducer",
                 "agentId": "6oz-Antiseize-Compound",
@@ -1463,7 +1463,7 @@
                 "notes": "This is a note."
             },
             {
-                "orderId": "Request-A",
+                "orderId": "Request-B",
                 "lotId": 1,
                 "taskId": 126,
                 "taskName": "Inspect-Electrical-Connectors",
@@ -1499,7 +1499,7 @@
                 "notes": "This is a note."
             },
             {
-                "orderId": "Request-A",
+                "orderId": "Request-B",
                 "lotId": 1,
                 "taskId": 128,
                 "taskName": "Inspect-Electrical-Connectors",
