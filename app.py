@@ -1,7 +1,7 @@
 import dash
-from dash import Dash, html, dcc, callback, Output, Input, State
+from dash import html, dcc
 import dash_bootstrap_components as dbc
-from flask import Flask, request, jsonify
+from flask import request, jsonify
 import config
 
 app = dash.Dash(__name__, use_pages=True, external_stylesheets=[

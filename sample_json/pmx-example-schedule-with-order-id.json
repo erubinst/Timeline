@@ -1,0 +1,2097 @@
+{
+    "status": "success",
+    "data": {
+        "id": "schedule-12",
+        "referenceStartTime": "2022-02-05T08:00:00+0000",
+        "tasks": [
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 3,
+                "taskName": "Remove-Electric-Power",
+                "agentId": "Container-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:00:00+0000",
+                    "2022-02-11T23:55:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:00:10+0000",
+                    "2022-02-11T23:55:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 4,
+                "taskName": "Remove-Electric-Power",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:00:00+0000",
+                    "2022-02-11T23:55:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:00:10+0000",
+                    "2022-02-11T23:55:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 5,
+                "taskName": "Remove-Electric-Power",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:00:00+0000",
+                    "2022-02-11T23:55:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:00:10+0000",
+                    "2022-02-11T23:55:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 8,
+                "taskName": "Remove-Troop-Seats",
+                "agentId": "Container-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:00:10+0000",
+                    "2022-02-11T23:55:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:00:20+0000",
+                    "2022-02-11T23:55:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 9,
+                "taskName": "Remove-Troop-Seats",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:00:10+0000",
+                    "2022-02-11T23:55:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:00:20+0000",
+                    "2022-02-11T23:55:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 10,
+                "taskName": "Remove-Troop-Seats",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:00:10+0000",
+                    "2022-02-11T23:55:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:00:20+0000",
+                    "2022-02-11T23:55:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 13,
+                "taskName": "Remove-Soundproofing-Panel",
+                "agentId": "Container-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:00:20+0000",
+                    "2022-02-11T23:55:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:00:30+0000",
+                    "2022-02-11T23:55:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 14,
+                "taskName": "Remove-Soundproofing-Panel",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:00:20+0000",
+                    "2022-02-11T23:55:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:00:30+0000",
+                    "2022-02-11T23:55:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 15,
+                "taskName": "Remove-Soundproofing-Panel",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:00:20+0000",
+                    "2022-02-11T23:55:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:00:30+0000",
+                    "2022-02-11T23:55:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 18,
+                "taskName": "Unhook-Cargo-Netting",
+                "agentId": "Container-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:00:30+0000",
+                    "2022-02-11T23:55:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:00:40+0000",
+                    "2022-02-11T23:55:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 19,
+                "taskName": "Unhook-Cargo-Netting",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:00:30+0000",
+                    "2022-02-11T23:55:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:00:40+0000",
+                    "2022-02-11T23:55:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 20,
+                "taskName": "Unhook-Cargo-Netting",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:00:30+0000",
+                    "2022-02-11T23:55:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:00:40+0000",
+                    "2022-02-11T23:55:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 23,
+                "taskName": "Remove-Fuel-System-Components",
+                "agentId": "Container-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:00:40+0000",
+                    "2022-02-11T23:55:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:00:50+0000",
+                    "2022-02-11T23:56:09+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 24,
+                "taskName": "Remove-Fuel-System-Components",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:00:40+0000",
+                    "2022-02-11T23:55:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:00:50+0000",
+                    "2022-02-11T23:56:09+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 25,
+                "taskName": "Remove-Fuel-System-Components",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:00:40+0000",
+                    "2022-02-11T23:55:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:00:50+0000",
+                    "2022-02-11T23:56:09+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 28,
+                "taskName": "Remove-Front-Panel",
+                "agentId": "Container-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:00:50+0000",
+                    "2022-02-11T23:56:09+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:01:00+0000",
+                    "2022-02-11T23:56:19+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 29,
+                "taskName": "Remove-Front-Panel",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:00:50+0000",
+                    "2022-02-11T23:56:09+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:01:00+0000",
+                    "2022-02-11T23:56:19+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 30,
+                "taskName": "Remove-Front-Panel",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:00:50+0000",
+                    "2022-02-11T23:56:09+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:01:00+0000",
+                    "2022-02-11T23:56:19+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 33,
+                "taskName": "Disconnect-Electrical-Connector(P303)",
+                "agentId": "Container-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:01:00+0000",
+                    "2022-02-11T23:56:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:01:10+0000",
+                    "2022-02-11T23:56:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 34,
+                "taskName": "Disconnect-Electrical-Connector(P303)",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:01:00+0000",
+                    "2022-02-11T23:56:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:01:10+0000",
+                    "2022-02-11T23:56:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 35,
+                "taskName": "Disconnect-Electrical-Connector(P303)",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:01:00+0000",
+                    "2022-02-11T23:56:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:01:10+0000",
+                    "2022-02-11T23:56:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 38,
+                "taskName": "Disconnect-Fuel-Hose-Reducer",
+                "agentId": "Container-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:01:10+0000",
+                    "2022-02-11T23:56:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:01:20+0000",
+                    "2022-02-11T23:56:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 39,
+                "taskName": "Disconnect-Fuel-Hose-Reducer",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:01:10+0000",
+                    "2022-02-11T23:56:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:01:20+0000",
+                    "2022-02-11T23:56:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 40,
+                "taskName": "Disconnect-Fuel-Hose-Reducer",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:01:10+0000",
+                    "2022-02-11T23:56:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:01:20+0000",
+                    "2022-02-11T23:56:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 43,
+                "taskName": "Disconnect-APU-Fuel-Line-Hoses",
+                "agentId": "Container-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:01:20+0000",
+                    "2022-02-11T23:56:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:01:30+0000",
+                    "2022-02-11T23:56:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 44,
+                "taskName": "Disconnect-APU-Fuel-Line-Hoses",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:01:20+0000",
+                    "2022-02-11T23:56:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:01:30+0000",
+                    "2022-02-11T23:56:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 45,
+                "taskName": "Disconnect-APU-Fuel-Line-Hoses",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:01:20+0000",
+                    "2022-02-11T23:56:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:01:30+0000",
+                    "2022-02-11T23:56:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 48,
+                "taskName": "Remove-Prime/Boost-Pump",
+                "agentId": "Container-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:01:30+0000",
+                    "2022-02-11T23:56:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:01:40+0000",
+                    "2022-02-11T23:56:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 49,
+                "taskName": "Remove-Prime/Boost-Pump",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:01:30+0000",
+                    "2022-02-11T23:56:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:01:40+0000",
+                    "2022-02-11T23:56:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 50,
+                "taskName": "Remove-Prime/Boost-Pump",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:01:30+0000",
+                    "2022-02-11T23:56:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:01:40+0000",
+                    "2022-02-11T23:56:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 53,
+                "taskName": "Unthread-Outlet-Valve",
+                "agentId": "Container-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:01:40+0000",
+                    "2022-02-11T23:56:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:01:50+0000",
+                    "2022-02-11T23:57:09+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 54,
+                "taskName": "Unthread-Outlet-Valve",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:01:40+0000",
+                    "2022-02-11T23:56:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:01:50+0000",
+                    "2022-02-11T23:57:09+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 55,
+                "taskName": "Unthread-Outlet-Valve",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:01:40+0000",
+                    "2022-02-11T23:56:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:01:50+0000",
+                    "2022-02-11T23:57:09+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 58,
+                "taskName": "Unthread-Reducer",
+                "agentId": "Container-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:01:50+0000",
+                    "2022-02-11T23:57:09+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:00+0000",
+                    "2022-02-11T23:57:19+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 59,
+                "taskName": "Unthread-Reducer",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:01:50+0000",
+                    "2022-02-11T23:57:09+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:00+0000",
+                    "2022-02-11T23:57:19+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 60,
+                "taskName": "Unthread-Reducer",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:01:50+0000",
+                    "2022-02-11T23:57:09+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:00+0000",
+                    "2022-02-11T23:57:19+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 63,
+                "taskName": "Remove-Electrical-Power",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:00+0000",
+                    "2022-02-11T23:57:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:10+0000",
+                    "2022-02-11T23:57:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 64,
+                "taskName": "Remove-Electrical-Power",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:00+0000",
+                    "2022-02-11T23:57:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:10+0000",
+                    "2022-02-11T23:57:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 65,
+                "taskName": "Remove-Electrical-Power",
+                "agentId": "Torque-Wrench-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:00+0000",
+                    "2022-02-11T23:57:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:10+0000",
+                    "2022-02-11T23:57:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 66,
+                "taskName": "Remove-Electrical-Power",
+                "agentId": "6oz-Antiseize-Compound",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:00+0000",
+                    "2022-02-11T23:57:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:10+0000",
+                    "2022-02-11T23:57:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 67,
+                "taskName": "Remove-Electrical-Power",
+                "agentId": "4oz-Petrolatum",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:00+0000",
+                    "2022-02-11T23:57:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:10+0000",
+                    "2022-02-11T23:57:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 70,
+                "taskName": "Lubricate-Packings",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:10+0000",
+                    "2022-02-11T23:57:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:20+0000",
+                    "2022-02-11T23:57:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 71,
+                "taskName": "Lubricate-Packings",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:10+0000",
+                    "2022-02-11T23:57:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:20+0000",
+                    "2022-02-11T23:57:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 72,
+                "taskName": "Lubricate-Packings",
+                "agentId": "Torque-Wrench-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:10+0000",
+                    "2022-02-11T23:57:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:20+0000",
+                    "2022-02-11T23:57:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 73,
+                "taskName": "Lubricate-Packings",
+                "agentId": "6oz-Antiseize-Compound",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:10+0000",
+                    "2022-02-11T23:57:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:20+0000",
+                    "2022-02-11T23:57:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 74,
+                "taskName": "Lubricate-Packings",
+                "agentId": "4oz-Petrolatum",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:10+0000",
+                    "2022-02-11T23:57:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:20+0000",
+                    "2022-02-11T23:57:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 77,
+                "taskName": "Install-Packing-Reducer",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:20+0000",
+                    "2022-02-11T23:57:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:30+0000",
+                    "2022-02-11T23:57:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 78,
+                "taskName": "Install-Packing-Reducer",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:20+0000",
+                    "2022-02-11T23:57:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:30+0000",
+                    "2022-02-11T23:57:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 79,
+                "taskName": "Install-Packing-Reducer",
+                "agentId": "Torque-Wrench-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:20+0000",
+                    "2022-02-11T23:57:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:30+0000",
+                    "2022-02-11T23:57:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 80,
+                "taskName": "Install-Packing-Reducer",
+                "agentId": "6oz-Antiseize-Compound",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:20+0000",
+                    "2022-02-11T23:57:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:30+0000",
+                    "2022-02-11T23:57:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 81,
+                "taskName": "Install-Packing-Reducer",
+                "agentId": "4oz-Petrolatum",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:20+0000",
+                    "2022-02-11T23:57:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:30+0000",
+                    "2022-02-11T23:57:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 84,
+                "taskName": "Coat-Threads-Reducer",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:30+0000",
+                    "2022-02-11T23:57:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:40+0000",
+                    "2022-02-11T23:57:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 85,
+                "taskName": "Coat-Threads-Reducer",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:30+0000",
+                    "2022-02-11T23:57:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:40+0000",
+                    "2022-02-11T23:57:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 86,
+                "taskName": "Coat-Threads-Reducer",
+                "agentId": "Torque-Wrench-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:30+0000",
+                    "2022-02-11T23:57:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:40+0000",
+                    "2022-02-11T23:57:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 87,
+                "taskName": "Coat-Threads-Reducer",
+                "agentId": "6oz-Antiseize-Compound",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:30+0000",
+                    "2022-02-11T23:57:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:40+0000",
+                    "2022-02-11T23:57:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 88,
+                "taskName": "Coat-Threads-Reducer",
+                "agentId": "4oz-Petrolatum",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:30+0000",
+                    "2022-02-11T23:57:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:40+0000",
+                    "2022-02-11T23:57:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 91,
+                "taskName": "Thread-Reducer",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:40+0000",
+                    "2022-02-11T23:57:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:50+0000",
+                    "2022-02-11T23:58:09+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 92,
+                "taskName": "Thread-Reducer",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:40+0000",
+                    "2022-02-11T23:57:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:50+0000",
+                    "2022-02-11T23:58:09+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 93,
+                "taskName": "Thread-Reducer",
+                "agentId": "Torque-Wrench-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:40+0000",
+                    "2022-02-11T23:57:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:50+0000",
+                    "2022-02-11T23:58:09+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 94,
+                "taskName": "Thread-Reducer",
+                "agentId": "6oz-Antiseize-Compound",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:40+0000",
+                    "2022-02-11T23:57:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:50+0000",
+                    "2022-02-11T23:58:09+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 95,
+                "taskName": "Thread-Reducer",
+                "agentId": "4oz-Petrolatum",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:40+0000",
+                    "2022-02-11T23:57:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:02:50+0000",
+                    "2022-02-11T23:58:09+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 98,
+                "taskName": "Coat-Threads-Outlet-Valve",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:50+0000",
+                    "2022-02-11T23:58:09+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:00+0000",
+                    "2022-02-11T23:58:19+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 99,
+                "taskName": "Coat-Threads-Outlet-Valve",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:50+0000",
+                    "2022-02-11T23:58:09+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:00+0000",
+                    "2022-02-11T23:58:19+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 100,
+                "taskName": "Coat-Threads-Outlet-Valve",
+                "agentId": "Torque-Wrench-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:50+0000",
+                    "2022-02-11T23:58:09+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:00+0000",
+                    "2022-02-11T23:58:19+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 101,
+                "taskName": "Coat-Threads-Outlet-Valve",
+                "agentId": "6oz-Antiseize-Compound",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:50+0000",
+                    "2022-02-11T23:58:09+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:00+0000",
+                    "2022-02-11T23:58:19+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 102,
+                "taskName": "Coat-Threads-Outlet-Valve",
+                "agentId": "4oz-Petrolatum",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:02:50+0000",
+                    "2022-02-11T23:58:09+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:00+0000",
+                    "2022-02-11T23:58:19+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 105,
+                "taskName": "Thread-Outlet-Valve",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:00+0000",
+                    "2022-02-11T23:58:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:10+0000",
+                    "2022-02-11T23:58:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 106,
+                "taskName": "Thread-Outlet-Valve",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:00+0000",
+                    "2022-02-11T23:58:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:10+0000",
+                    "2022-02-11T23:58:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 107,
+                "taskName": "Thread-Outlet-Valve",
+                "agentId": "Torque-Wrench-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:00+0000",
+                    "2022-02-11T23:58:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:10+0000",
+                    "2022-02-11T23:58:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 108,
+                "taskName": "Thread-Outlet-Valve",
+                "agentId": "6oz-Antiseize-Compound",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:00+0000",
+                    "2022-02-11T23:58:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:10+0000",
+                    "2022-02-11T23:58:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 109,
+                "taskName": "Thread-Outlet-Valve",
+                "agentId": "4oz-Petrolatum",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:00+0000",
+                    "2022-02-11T23:58:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:10+0000",
+                    "2022-02-11T23:58:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 112,
+                "taskName": "Install-Pump",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:10+0000",
+                    "2022-02-11T23:58:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:20+0000",
+                    "2022-02-11T23:58:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 113,
+                "taskName": "Install-Pump",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:10+0000",
+                    "2022-02-11T23:58:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:20+0000",
+                    "2022-02-11T23:58:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 114,
+                "taskName": "Install-Pump",
+                "agentId": "Torque-Wrench-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:10+0000",
+                    "2022-02-11T23:58:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:20+0000",
+                    "2022-02-11T23:58:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 115,
+                "taskName": "Install-Pump",
+                "agentId": "6oz-Antiseize-Compound",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:10+0000",
+                    "2022-02-11T23:58:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:20+0000",
+                    "2022-02-11T23:58:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 116,
+                "taskName": "Install-Pump",
+                "agentId": "4oz-Petrolatum",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:10+0000",
+                    "2022-02-11T23:58:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:20+0000",
+                    "2022-02-11T23:58:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 119,
+                "taskName": "Unplug-Connect-Fuel-Hose-Reducer",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:20+0000",
+                    "2022-02-11T23:58:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:30+0000",
+                    "2022-02-11T23:58:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 120,
+                "taskName": "Unplug-Connect-Fuel-Hose-Reducer",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:20+0000",
+                    "2022-02-11T23:58:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:30+0000",
+                    "2022-02-11T23:58:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 121,
+                "taskName": "Unplug-Connect-Fuel-Hose-Reducer",
+                "agentId": "Torque-Wrench-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:20+0000",
+                    "2022-02-11T23:58:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:30+0000",
+                    "2022-02-11T23:58:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 122,
+                "taskName": "Unplug-Connect-Fuel-Hose-Reducer",
+                "agentId": "6oz-Antiseize-Compound",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:20+0000",
+                    "2022-02-11T23:58:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:30+0000",
+                    "2022-02-11T23:58:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 123,
+                "taskName": "Unplug-Connect-Fuel-Hose-Reducer",
+                "agentId": "4oz-Petrolatum",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:20+0000",
+                    "2022-02-11T23:58:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:30+0000",
+                    "2022-02-11T23:58:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 126,
+                "taskName": "Inspect-Electrical-Connectors",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:30+0000",
+                    "2022-02-11T23:58:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:40+0000",
+                    "2022-02-11T23:58:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 127,
+                "taskName": "Inspect-Electrical-Connectors",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:30+0000",
+                    "2022-02-11T23:58:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:40+0000",
+                    "2022-02-11T23:58:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 128,
+                "taskName": "Inspect-Electrical-Connectors",
+                "agentId": "Torque-Wrench-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:30+0000",
+                    "2022-02-11T23:58:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:40+0000",
+                    "2022-02-11T23:58:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 129,
+                "taskName": "Inspect-Electrical-Connectors",
+                "agentId": "6oz-Antiseize-Compound",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:30+0000",
+                    "2022-02-11T23:58:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:40+0000",
+                    "2022-02-11T23:58:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 130,
+                "taskName": "Inspect-Electrical-Connectors",
+                "agentId": "4oz-Petrolatum",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:30+0000",
+                    "2022-02-11T23:58:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:40+0000",
+                    "2022-02-11T23:58:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 133,
+                "taskName": "Unplug-Connect-Electrical-Connector",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:40+0000",
+                    "2022-02-11T23:58:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:50+0000",
+                    "2022-02-11T23:59:09+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 134,
+                "taskName": "Unplug-Connect-Electrical-Connector",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:40+0000",
+                    "2022-02-11T23:58:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:50+0000",
+                    "2022-02-11T23:59:09+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 135,
+                "taskName": "Unplug-Connect-Electrical-Connector",
+                "agentId": "Torque-Wrench-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:40+0000",
+                    "2022-02-11T23:58:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:50+0000",
+                    "2022-02-11T23:59:09+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 136,
+                "taskName": "Unplug-Connect-Electrical-Connector",
+                "agentId": "6oz-Antiseize-Compound",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:40+0000",
+                    "2022-02-11T23:58:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:50+0000",
+                    "2022-02-11T23:59:09+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 137,
+                "taskName": "Unplug-Connect-Electrical-Connector",
+                "agentId": "4oz-Petrolatum",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:40+0000",
+                    "2022-02-11T23:58:59+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:03:50+0000",
+                    "2022-02-11T23:59:09+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 140,
+                "taskName": "Prime-Fuel-System",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:50+0000",
+                    "2022-02-11T23:59:09+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:00+0000",
+                    "2022-02-11T23:59:19+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 141,
+                "taskName": "Prime-Fuel-System",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:50+0000",
+                    "2022-02-11T23:59:09+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:00+0000",
+                    "2022-02-11T23:59:19+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 142,
+                "taskName": "Prime-Fuel-System",
+                "agentId": "Torque-Wrench-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:50+0000",
+                    "2022-02-11T23:59:09+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:00+0000",
+                    "2022-02-11T23:59:19+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 143,
+                "taskName": "Prime-Fuel-System",
+                "agentId": "6oz-Antiseize-Compound",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:50+0000",
+                    "2022-02-11T23:59:09+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:00+0000",
+                    "2022-02-11T23:59:19+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 144,
+                "taskName": "Prime-Fuel-System",
+                "agentId": "4oz-Petrolatum",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:03:50+0000",
+                    "2022-02-11T23:59:09+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:00+0000",
+                    "2022-02-11T23:59:19+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 147,
+                "taskName": "Prime-APU_Fuel-System",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:04:00+0000",
+                    "2022-02-11T23:59:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:10+0000",
+                    "2022-02-11T23:59:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 148,
+                "taskName": "Prime-APU_Fuel-System",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:04:00+0000",
+                    "2022-02-11T23:59:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:10+0000",
+                    "2022-02-11T23:59:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 149,
+                "taskName": "Prime-APU_Fuel-System",
+                "agentId": "Torque-Wrench-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:04:00+0000",
+                    "2022-02-11T23:59:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:10+0000",
+                    "2022-02-11T23:59:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 150,
+                "taskName": "Prime-APU_Fuel-System",
+                "agentId": "6oz-Antiseize-Compound",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:04:00+0000",
+                    "2022-02-11T23:59:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:10+0000",
+                    "2022-02-11T23:59:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 151,
+                "taskName": "Prime-APU_Fuel-System",
+                "agentId": "4oz-Petrolatum",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:04:00+0000",
+                    "2022-02-11T23:59:19+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:10+0000",
+                    "2022-02-11T23:59:29+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 154,
+                "taskName": "Install-Cargo-Netting",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:04:10+0000",
+                    "2022-02-11T23:59:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:20+0000",
+                    "2022-02-11T23:59:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 155,
+                "taskName": "Install-Cargo-Netting",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:04:10+0000",
+                    "2022-02-11T23:59:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:20+0000",
+                    "2022-02-11T23:59:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 156,
+                "taskName": "Install-Cargo-Netting",
+                "agentId": "Torque-Wrench-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:04:10+0000",
+                    "2022-02-11T23:59:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:20+0000",
+                    "2022-02-11T23:59:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 157,
+                "taskName": "Install-Cargo-Netting",
+                "agentId": "6oz-Antiseize-Compound",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:04:10+0000",
+                    "2022-02-11T23:59:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:20+0000",
+                    "2022-02-11T23:59:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 158,
+                "taskName": "Install-Cargo-Netting",
+                "agentId": "4oz-Petrolatum",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:04:10+0000",
+                    "2022-02-11T23:59:29+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:20+0000",
+                    "2022-02-11T23:59:39+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 161,
+                "taskName": "Install-Soundproofing-Panels",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:04:20+0000",
+                    "2022-02-11T23:59:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:30+0000",
+                    "2022-02-11T23:59:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 162,
+                "taskName": "Install-Soundproofing-Panels",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:04:20+0000",
+                    "2022-02-11T23:59:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:30+0000",
+                    "2022-02-11T23:59:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 163,
+                "taskName": "Install-Soundproofing-Panels",
+                "agentId": "Torque-Wrench-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:04:20+0000",
+                    "2022-02-11T23:59:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:30+0000",
+                    "2022-02-11T23:59:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 164,
+                "taskName": "Install-Soundproofing-Panels",
+                "agentId": "6oz-Antiseize-Compound",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:04:20+0000",
+                    "2022-02-11T23:59:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:30+0000",
+                    "2022-02-11T23:59:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 165,
+                "taskName": "Install-Soundproofing-Panels",
+                "agentId": "4oz-Petrolatum",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:04:20+0000",
+                    "2022-02-11T23:59:39+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:30+0000",
+                    "2022-02-11T23:59:49+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 168,
+                "taskName": "Install-Troop-Seats",
+                "agentId": "Mechanic-Franks",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:04:30+0000",
+                    "2022-02-11T23:59:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:40+0000",
+                    "2022-02-11T23:59:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 169,
+                "taskName": "Install-Troop-Seats",
+                "agentId": "Tool-Kit-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:04:30+0000",
+                    "2022-02-11T23:59:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:40+0000",
+                    "2022-02-11T23:59:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 170,
+                "taskName": "Install-Troop-Seats",
+                "agentId": "Torque-Wrench-1",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:04:30+0000",
+                    "2022-02-11T23:59:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:40+0000",
+                    "2022-02-11T23:59:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 171,
+                "taskName": "Install-Troop-Seats",
+                "agentId": "6oz-Antiseize-Compound",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:04:30+0000",
+                    "2022-02-11T23:59:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:40+0000",
+                    "2022-02-11T23:59:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            },
+            {
+                "orderId": "Request-A",
+                "lotId": 1,
+                "taskId": 172,
+                "taskName": "Install-Troop-Seats",
+                "agentId": "4oz-Petrolatum",
+                "configurationId": "",
+                "start_time": [
+                    "2022-02-05T08:04:30+0000",
+                    "2022-02-11T23:59:49+0000"
+                ],
+                "end_time": [
+                    "2022-02-05T08:04:40+0000",
+                    "2022-02-11T23:59:59+0000"
+                ],
+                "status": "scheduled",
+                "notes": "This is a note."
+            }
+        ]
+    }
+}

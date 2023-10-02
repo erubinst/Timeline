@@ -1,11 +1,10 @@
 import dash
-from dash import Dash, html, dcc, callback, Output, Input, State
+from dash import html, dcc, callback, Output, Input, State
 from figures.figure import Figure
 import dash_bootstrap_components as dbc
-from flask import Flask, request, jsonify
 import config
 
-dash.register_page(__name__)
+# dash.register_page(__name__)
 
 fig = Figure()
 # Store the received message - should be initialized by requesting from scheduler
@@ -49,7 +48,6 @@ layout = html.Div([
     State('relayout-data-store', 'data')
 )
 def update_relayout_data(relayout_data, prev_relayout_data):
-    print("Relayout data: ", relayout_data)
     if relayout_data:
         x_range = [relayout_data.get(
             'xaxis.range[0]'), relayout_data.get('xaxis.range[1]')]
@@ -72,8 +70,6 @@ def update_relayout_data(relayout_data, prev_relayout_data):
         return [[], [], None]
 
 # Callback to show or close the popup based on clicks
-
-
 @callback(
     [Output('pop-up', 'is_open'),
      Output('pop-up-content', 'children'),
@@ -105,8 +101,6 @@ def show_or_close_pop_up(click_data, cancel_clicks, completed_clicks, aborted_cl
     return is_open, dash.no_update, dash.no_update
 
 # Callback to update the visibility of the buttons based on resource status
-
-
 @callback(
     [Output('button-completed', 'style'),
      Output('button-abort', 'style'),
@@ -130,8 +124,6 @@ def update_button_visibility(click_data):
     return {}, {}, {}
 
 # Callback to update the timeline data when the buttons are clicked
-
-
 @callback(
     Output('timeline-graph', 'figure', allow_duplicate=True),
     [Input('button-completed', 'n_clicks'),
@@ -163,8 +155,6 @@ def update_timeline(completed_clicks, aborted_clicks, executed_clicks, relayout_
     return fig.plot
 
 # Route to handle the incoming POST requests and update the latest received message
-
-
 
 # Callback to update the UI with the latest received message
 # Allow this to run on initial booting of the app so that latest data from scheduler is displayed
