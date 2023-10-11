@@ -1,4 +1,5 @@
-{
+{   
+    "msgType": "Update",
     "status": "success",
     "data": {
         "id": "schedule-12",
@@ -55,7 +56,7 @@
                     "2022-02-05T08:00:10+0000",
                     "2022-02-11T23:55:29+0000"
                 ],
-                "status": "scheduled",
+                "status": "completed",
                 "notes": "This is a note."
             },
             {
@@ -1428,7 +1429,7 @@
             },
             {
                 "orderId": "Request-B",
-                "lotId": 3,
+                "lotId": 6,
                 "taskId": 122,
                 "taskName": "Unplug-Connect-Fuel-Hose-Reducer",
                 "agentId": "6oz-Antiseize-Compound",
@@ -1445,8 +1446,8 @@
                 "notes": "This is a note."
             },
             {
-                "orderId": "Request-A",
-                "lotId": 1,
+                "orderId": "Request-B",
+                "lotId": 6,
                 "taskId": 123,
                 "taskName": "Unplug-Connect-Fuel-Hose-Reducer",
                 "agentId": "4oz-Petrolatum",
@@ -1500,7 +1501,7 @@
             },
             {
                 "orderId": "Request-B",
-                "lotId": 1,
+                "lotId": 0,
                 "taskId": 128,
                 "taskName": "Inspect-Electrical-Connectors",
                 "agentId": "Torque-Wrench-1",

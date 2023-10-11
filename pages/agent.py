@@ -4,7 +4,7 @@ from figures.figure import Figure
 import dash_bootstrap_components as dbc
 import config
 
-# dash.register_page(__name__)
+dash.register_page(__name__)
 
 fig = Figure()
 # Store the received message - should be initialized by requesting from scheduler
