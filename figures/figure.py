@@ -5,9 +5,10 @@ from datetime import datetime as dt
 
 
 class Figure():
-    def __init__(self, figType='resource', hoverFields=["start_time", "end_time", "status", "notes"]):
+    def __init__(self, figType='resource', hoverFields=["start_time", "end_time", "status", "taskId", "orderId", "notes"]):
         self.df = pd.DataFrame({
             'taskId': [],
+            'orderId': [],
             'taskName': [],
             'agentId': [],
             'configurationId': [],
@@ -43,7 +44,8 @@ class Figure():
                 # Check if the taskId exists in the DataFrame
                 if not index.empty:
                     # Update the row with the dictionary values
-                    self.df.loc[index[0]] = task
+                    for key,value in task.items():
+                        self.df.loc[index[0],[key]] = [value]
                 else:
                     # Handle the case where the taskId is not found
                     print(f"Task with taskId {task['taskId']} not found.")
