@@ -40,4 +40,4 @@ def update_messages():
 server.add_url_rule('/update', view_func=update_messages, methods=['POST'])
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, host = "0.0.0.0")
