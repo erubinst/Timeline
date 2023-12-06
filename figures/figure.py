@@ -1,11 +1,9 @@
 import plotly.express as px
 import pandas as pd
-import json
-from datetime import datetime as dt
 
 
 class Figure():
-    def __init__(self, figType='resource', hoverFields=["start_time", "end_time", "status", "taskId", "orderId", "notes"]):
+    def __init__(self, figType='resource', hoverFields=["start_time", "end_time", "status", "taskId", "orderId","location", "notes"]):
         self.df = pd.DataFrame({
             'taskId': [],
             'orderId': [],
@@ -15,6 +13,7 @@ class Figure():
             'start_time': [],
             'end_time': [],
             'status': [],
+            'location': [],
             'notes': [],
         })
         self.colors = {'scheduled': 'rgb(249,168,37)',  # Orange
@@ -77,6 +76,7 @@ class Figure():
                 "start_time": earliest_start_time,
                 "end_time": latest_end_time,
                 "status": "order-label",
+                "location": None,
                 "notes": None
             }
             new_rows.append(new_row)
@@ -96,7 +96,7 @@ class Figure():
         if self.fig_type == 'resource':
             custom_order = self.df['agentId'].unique()
             self.plot = px.timeline(self.df, x_start="start_time", x_end="end_time", y="agentId", color="status",
-                                    custom_data=['taskId', 'notes'], category_orders={"agentId": custom_order},
+                                    custom_data=['taskId', 'location', 'notes'], category_orders={"agentId": custom_order},
                                     color_discrete_map=self.colors, hover_name="taskName", text="taskName", hover_data=self.hover_fields)
             self.plot.update_traces(
                 insidetextanchor='middle', textposition='inside', cliponaxis=True, textangle=0)

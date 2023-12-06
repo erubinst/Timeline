@@ -4,7 +4,7 @@ from figures.figure import Figure
 import dash_bootstrap_components as dbc
 import config
 
-# dash.register_page(__name__)
+#dash.register_page(__name__)
 
 fig = Figure(figType = 'order')
 initial_post = True
@@ -59,11 +59,11 @@ def update_output(n_intervals, relayout_data):
         x_range = relayout_data[0]
         y_range = relayout_data[1]
         dragmode = relayout_data[2]
-    if config.latest_received_message:
+    if config.order_latest_received_message != config.latest_received_message:
         fig.get_figure(x_range, y_range, dragmode,
                        json_data=config.latest_received_message)
-        config.latest_received_message = None
         initial_post = False
+        config.order_latest_received_message = config.latest_received_message
         return fig.plot, {'display': 'block'}
     elif initial_post:
         return {'data': [], 'layout': {}}, {'display': 'none'}

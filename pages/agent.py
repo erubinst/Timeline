@@ -171,10 +171,10 @@ def update_output(n_intervals, relayout_data):
         x_range = relayout_data[0]
         y_range = relayout_data[1]
         dragmode = relayout_data[2]
-    if config.latest_received_message:
+    if config.latest_received_message != config.agent_latest_received_message:
         fig.get_figure(x_range, y_range, dragmode,
                        json_data=config.latest_received_message)
-        config.latest_received_message = None
+        config.agent_latest_received_message = config.latest_received_message
         initial_post = False
         return fig.plot, {'display': 'block'}
     elif initial_post:
