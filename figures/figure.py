@@ -51,9 +51,11 @@ class Figure():
                     print(f"Task with taskId {task['taskId']} not found.")
         self.df['start_time'] = self.df['start_time'].apply(lambda x: x if isinstance(x, pd.Timestamp) else pd.to_datetime(x[0]))
         self.df['end_time'] = self.df['end_time'].apply(lambda x: x if isinstance(x, pd.Timestamp) else pd.to_datetime(x[0]))
-        index_to_keep = self.df[self.df['status'] == 'completed']['end_time'].idxmax()
-        # Use the identified index to filter the DataFrame
-        self.df = self.df.drop(self.df[self.df['status'] == 'completed'].index.difference([index_to_keep]))
+        # check if there are any in the df with status completed
+        if self.df['status'].str.contains('completed').any():
+            index_to_keep = self.df[self.df['status'] == 'completed']['end_time'].idxmax()
+            # Use the identified index to filter the DataFrame
+            self.df = self.df.drop(self.df[self.df['status'] == 'completed'].index.difference([index_to_keep]))
 
     def update_axes(self, x_range, y_range, dragmode):
         if x_range:
