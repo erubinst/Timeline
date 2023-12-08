@@ -21,6 +21,7 @@ layout = html.Div([
         data=config.table_df.to_dict('records'),
         editable=True,
         filter_action="native",
+        sort_action='native'
                 )
 ])
 
