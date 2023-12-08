@@ -19,7 +19,8 @@ layout = html.Div([
         id='my-datatable',
         columns=[{'name': col, 'id': col} for col in config.table_df.columns],
         data=config.table_df.to_dict('records'),
-        editable=True
+        editable=True,
+        filter_action="native",
                 )
 ])
 
