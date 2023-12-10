@@ -15,6 +15,7 @@ initial_post = True
 
 # App layout
 layout = html.Div([
+    html.H1(children='Table', style={'textAlign': 'center'}),
     dash_table.DataTable(
         id='my-datatable',
         columns=[{'name': col, 'id': col} for col in config.table_df.columns],

@@ -3,7 +3,7 @@ from dash import Dash, html
 image_path = 'assets/building.jpeg'
 import dash
 
-dash.register_page(__name__, path='/')
+dash.register_page(__name__, path='/', order = 1)
 
 # Define the home page layout
 layout = dbc.Container([
