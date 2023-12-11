@@ -62,8 +62,8 @@ def send_post_message(n_clicks, dropdown_value, quantity_value):
 
     # Continue with your logic to send the POST message
     input_data = {"structureType": dropdown_value, "quantity": quantity_value}
-    response = requests.post('http://localhost:8050/new-order', json=input_data)
+    response = requests.post('http://localhost:9091/new-order', json=input_data)
     print(response.text)
     
     # Clear the values after sending the POST message
-    return f"POST message sent for Order: {dropdown_value}, Quantity: {quantity_value}", None, None
+    return f"Thank you for your order of {quantity_value} {dropdown_value}", None, None
