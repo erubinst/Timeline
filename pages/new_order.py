@@ -20,7 +20,7 @@ layout = dbc.Container([
     ]),
     dbc.Row([
         dbc.Col(
-            dcc.Dropdown(['pagoda', 'staircase'], id='demo-dropdown', placeholder="Select an order type"),
+            dcc.Dropdown(['heart', 'human', 'stairs'], id='demo-dropdown', placeholder="Select an order type"),
             width={'size': 4},
             style={'margin-bottom': '20px'}
         ),

@@ -5,6 +5,7 @@ table_latest_received_message = None
 order_latest_received_message = None
 initial_data = {'orderId': [],
                 'productId': [],
+                'quantity': [],
                 # start time of earliest task
                 'start_time': [],
                 'end_time': [],

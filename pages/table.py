@@ -15,10 +15,11 @@ initial_post = True
 
 # App layout
 layout = html.Div([
-    html.H1(children='Table', style={'textAlign': 'center'}),
+    html.H1(children='Orders', style={'textAlign': 'center'}),
     dash_table.DataTable(
         id='my-datatable',
         columns=[{'name': col, 'id': col} for col in config.table_df.columns],
+        style_cell={'textAlign': 'center'},
         data=config.table_df.to_dict('records'),
         editable=True,
         filter_action="native",
@@ -30,6 +31,7 @@ def process_group(group):
     # Perform your calculations here
     orderId = group['orderId'].iloc[0]
     productId = group['productId'].iloc[0]
+    quantity = group['quantity'].iloc[0]
     start_time = group['start_time'].min()
     end_time = group['end_time'].max()
     # if all scheduled, scheduled, if any executed, executing, if all completed, completed, if any aborted, aborted
@@ -50,7 +52,7 @@ def process_group(group):
         status = 'scheduled'
     
     # Return a DataFrame with the unique 'orderId' and the calculated results
-    return pd.DataFrame({'orderId': [orderId], 'productId': [productId], 'start_time': [start_time], 'end_time': [end_time], 'status': [status], 'current_executing_task': [current_executing_task]})
+    return pd.DataFrame({'orderId': [orderId], 'productId': [productId], 'quantity': [quantity], 'start_time': [start_time], 'end_time': [end_time], 'status': [status], 'current_executing_task': [current_executing_task]})
 
 
 def grab_relevant_data(latest_received_message):

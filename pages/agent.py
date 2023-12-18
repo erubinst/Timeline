@@ -3,6 +3,7 @@ from dash import html, dcc, callback, Output, Input, State
 from figures.figure import Figure
 import dash_bootstrap_components as dbc
 import config
+import requests
 
 dash.register_page(__name__)
 
@@ -123,6 +124,8 @@ def update_button_visibility(click_data):
 
     return {}, {}, {}
 
+executer_url = 'http://localhost:9091/execution-ui'
+
 # Callback to update the timeline data when the buttons are clicked
 @callback(
     Output('timeline-graph', 'figure', allow_duplicate=True),
@@ -142,6 +145,8 @@ def update_timeline(completed_clicks, aborted_clicks, executed_clicks, relayout_
         task_id = click_data['points'][0]['customdata'][0]
         if triggered_id == 'button-completed':
             fig.df.loc[fig.df['taskId'] == task_id, 'status'] = 'completed'
+            complete_msg = {'msgType': 'EndTask', 'taskId': task_id, 'name': "dummy", 'outcome': 'success'}
+            requests.post(executer_url, json=complete_msg)
         elif triggered_id == 'button-abort':
             fig.df.loc[fig.df['task_id'] == task_id, 'status'] = 'aborted'
         elif triggered_id == 'button-executed':

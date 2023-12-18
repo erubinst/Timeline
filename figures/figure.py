@@ -3,7 +3,7 @@ import pandas as pd
 
 
 class Figure():
-    def __init__(self, figType='resource', hoverFields=["start_time", "end_time", "status", "taskId", "orderId","location", "productId", "notes"]):
+    def __init__(self, figType='resource', hoverFields=["start_time", "end_time", "status", "taskId", "orderId","location", "productId", "quantity", "notes"]):
         self.df = pd.DataFrame({
             'taskId': [],
             'orderId': [],
@@ -15,6 +15,7 @@ class Figure():
             'status': [],
             'location': [],
             'productId': [],
+            'quantity': [],
             'notes': [],
         })
         self.colors = {'scheduled': 'rgb(249,168,37)',  # Orange
@@ -84,6 +85,7 @@ class Figure():
                 "status": "order-label",
                 "location": None,
                 "productId": None,
+                "quantity": None,
                 "notes": None
             }
             new_rows.append(new_row)
@@ -103,7 +105,7 @@ class Figure():
         if self.fig_type == 'resource':
             custom_order = self.df['agentId'].unique()
             self.plot = px.timeline(self.df, x_start="start_time", x_end="end_time", y="agentId", color="status",
-                                    custom_data=['taskId', 'location', 'productId','notes'], category_orders={"agentId": custom_order},
+                                    custom_data=['taskId', 'location', 'productId', 'quantity', 'notes'], category_orders={"agentId": custom_order},
                                     color_discrete_map=self.colors, hover_name="taskName", text="taskName", hover_data=self.hover_fields)
             self.plot.update_traces(
                 insidetextanchor='middle', textposition='inside', cliponaxis=True, textangle=0)
